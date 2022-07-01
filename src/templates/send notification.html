@@ -1,0 +1,37 @@
+{% extends 'police_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/insertnotification">
+  <div align="center">
+    <p><h2>SEND <span>NOTIFICATION</span></h2></p>
+    <table width="200" border="1" id="customers">
+
+
+        <th width="121" scope="col">Notification</th>
+        <th width="45" scope="col">date</th>
+        <th ></th>
+      </tr>
+      <tr>
+        {% for i in val %}
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td><a href="/deletenoti?id={{i[0]}}">delete</a></td>
+      </tr>
+      {% endfor %}
+
+    </table>
+    <br>
+    <br>
+        <table width="200" border="1" id="customers">
+
+          <tr><td> notification:</td><td>
+    <textarea name="textarea"></textarea></td>
+    </tr>
+
+</table>
+<br>
+     <div align="center">
+            <input type="submit" name="Submit" value="Add" class="btn btn-primary" />
+            </div>
+  </div>
+</form>
+{% endblock %}

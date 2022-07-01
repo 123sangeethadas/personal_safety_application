@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/updatep">
+  <div align="center">
+    <p>Edit police station    </p>
+    <table width="300" border="1">
+      <tr>
+        <th height="64" scope="row">police station name </th>
+        <td><input type="text" name="textfield" value="{{i[2]}}" required pattern="[A-Z a-z.]{3,25}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">phone no </th>
+        <td><input type="text" name="textfield2" value="{{i[3]}}" required pattern="[0-9]{10}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">email</th>
+        <td><input type="text" name="textfield3" value="{{i[4]}}"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" /></td>
+      </tr>
+      <tr>
+        <th height="30" scope="row">place</th>
+        <td><input type="text" name="textfield4" value="{{i[5]}}"pattern="[A-Z a-z.]{3,25}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">post </th>
+        <td><input type="text" name="textfield5" value="{{i[6]}}"pattern="[A-Z a-z.]{3,25}"/></td>
+      </tr>
+      <tr>
+        <th scope="row">pin</th>
+        <td><input type="text" name="textfield6" value="{{i[7]}}"required pattern="[0-9]{6}"/></td>
+      </tr>
+
+      <tr>
+        <th scope="row">longitude</th>
+        <td><input type="text" name="textfield9" value="{{i[8]}}" required/></td>
+      </tr>
+      <tr>
+        <th scope="row">latitude</th>
+        <td><input type="text" name="textfield10" value="{{i[9]}}"required/><input type="hidden" name="lid" value="{{i[1]}}"required/></td>
+      </tr>
+      <tr>
+        <th colspan="2" scope="row"><label>
+          <input type="submit" name="Submit" value="Update" />
+        </label></th>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <div align="center"></div>
+  </div>
+</form>
+
+
+</body>
+</html>

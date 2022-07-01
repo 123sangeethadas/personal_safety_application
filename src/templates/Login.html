@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+.style2 {font-size: 60px
+color: #FF7A59;
+}
+.style3 {
+	font-size: 50px;
+	color: #660099;
+	font-style: arial;
+}
+.style4 {
+font-size: 28px;
+font-weight: bold;
+color: #FFFFFF;
+background-color: #6495ED;
+}
+.style5 {
+font-size: 35px;
+}
+-->
+</style>
+</head>
+
+<body>
+<form action="/login" method="post" name="form1" id="form1">
+    <p class="style3"><h2>Log<span>In</span></h2></p>
+    <div class="login-content left animated" data-animate="fadeInLeft">
+
+    <p>
+      <label><span class="style2">Username</span>
+      <input type="text" name="textfield" style="color:black;" class="style5" required  />
+      </label>
+    </p>
+    <p>
+      <label><span class="style2">Password</span>
+      <input type="password" name="textfield2" style="color:black;" class="style5" required />
+      </label>
+    </p>
+    <p>
+      <label>
+      <input name="Log In" type="submit" class="style4" value="Log In" />
+
+      </label>
+    </p>
+    <p><a href="#">Forgot Password?</a></p>
+  </div>
+</form>
+</body>
+{% endblock %}

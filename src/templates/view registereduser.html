@@ -1,0 +1,37 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+
+
+    <section id="view registereduser" class="light">
+
+<form action="" method="post" name="form1" id="form1">
+  <div align="center" class="style1">
+    <p><h2>VIEW <span>REGISTERED USER</span></h2></p>
+    <table width="1009" height="162" border="2" id="customers">
+      <tr>
+        <th   width="150" scope="col"><span class="style2">name</span></th>
+        <th width="120" scope="col">phoneno</th>
+        <th scope="200">email</th>
+        <th scope="50">age</th>
+        <th scope="150">gender</th>
+        <th scope="300">address</th>
+      </tr>
+{% for i in val %}
+      <tr>
+        <td>{{i[2]}} {{i[3]}}</td>
+        <td>&nbsp;{{i[4]}}</td>
+        <td>&nbsp;{{i[5]}}</td>
+        <td>{{i[6]}}&nbsp;</td>
+        <td>{{i[7]}}&nbsp;</td>
+        <td>&nbsp;{{i[8]}} ,{{i[9]}} ,{{i[10]}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+    <p>&nbsp;</p>
+  </div>
+</form>
+
+</section>
+{% endblock %}

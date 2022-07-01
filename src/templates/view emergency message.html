@@ -1,0 +1,25 @@
+{% extends 'police_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <p><h2>VIEW <span>EMERGENCY MESSAGE</span></h2></p>
+    <table width="200" border="1" id="customers">
+      <tr>
+        <th scope="col">username</th>
+        <th scope="col">date_time</th>
+        <th scope="col">message</th>
+        <th scope="col">track emergency </th>
+      </tr>
+      {% for i in val %}
+      <tr>
+        <td>&nbsp;{{i[7]}} {{i[8]}}</td>
+        <td>{{i[6]}}</td>
+        <td>{{i[3]}}</td>
+        <td><div align="center"><a href="http://maps.google.com?q={{i[4]}},{{i[5]}}">track</a></div></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p>&nbsp;  </p>
+  </div>
+</form>
+{% endblock %}

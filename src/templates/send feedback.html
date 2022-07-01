@@ -1,0 +1,30 @@
+{% extends 'police_index.html' %}
+{% block body %}
+
+
+<form id="form1" name="form1" method="post" action="/insertfeedback">
+    <P><h2>SEND <span> FEEDBACK</span></h2></P>
+
+    <table width="600" border="0" id="customers">
+      <tr>
+   <tr><td>feedback:
+      <textarea name="textarea"></textarea>
+</td></tr> <tr><th>rating:
+      <select name="r" class="btn btn-primary">
+          <option>Select</option>
+           <option>1</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+           <option>5</option>
+
+      </select>
+</th></tr> <tr>
+    <td>
+      <label>
+      <input type="submit" name="Submit" value="send" class="btn btn-primary"  />
+      </label>
+    </td></tr>
+  </table>
+</form>
+{% endblock %}

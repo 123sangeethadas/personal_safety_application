@@ -1,0 +1,42 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="addpolicestation">
+  <div align="center">
+    <p><h2>ADD/MODIFY <span> POLICE STATION</span></h2></p>
+     <table id="customers" border="1">
+
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">phoneno</th>
+        <th scope="col">email</th>
+        <th scope="col">address</th>
+        <th scope="col">   </th>
+      </tr>
+{% for i in val %}
+       <tr>
+        <td>{{i[2]}} </td>
+        <td> {{i[3]}}</td>
+        <td>{{i[4]}}</td>
+           <td>{{i[5]}}, {{i[6]}}, {{i[7]}}</td>
+           <td>
+               <p><a href="/editpolice?id={{i[1]}}" class="btn btn-info">Edit</a></p>
+               <p><a href="/deletepolicestation?id={{i[1]}}"  class="btn btn-danger">Delete</a></p></td>
+      </tr>
+       {% endfor %}
+
+
+      <tr align="center">
+        <td colspan="5"><label>
+          <div align="center">
+            <input type="submit" name="Submit" value="Add" class="btn btn-primary"/>
+            </div>
+        </label></td>
+      </tr>
+    </table>
+    <p>&nbsp;  </p>
+  </div>
+</form>
+
+
+{% endblock %}
